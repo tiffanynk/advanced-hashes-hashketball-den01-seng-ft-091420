@@ -134,10 +134,10 @@ end
 #In Ruby, you don't need to use parentheses in most instances. It's implicit
 def num_points_scored(player_name)
 
-#
-# players.find do |player|
-#  player[:player_name] == player_name
-# end[:points]
+
+players.find do |player|
+ player[:player_name] == player_name
+end[:points]
 
 #append :points to end to make sure it knows it's a part of the previous method
 
