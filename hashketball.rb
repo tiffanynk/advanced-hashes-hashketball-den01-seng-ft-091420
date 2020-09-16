@@ -184,7 +184,7 @@ end
 def player_numbers(team_name)
   if team_name == game_hash[:home][:team_name] ? game_hash[:home][:players][:number] : game_hash[:away][:players][:number]
   # jersey_numbers = []
-  # 
+  #
   # game_hash.each do | key, value |
   #   if value[:team_name] == team_name
   #     value[:players].each do |element|
