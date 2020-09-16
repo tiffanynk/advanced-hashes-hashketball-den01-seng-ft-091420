@@ -128,14 +128,20 @@ def game_hash
   }
 end
 
+def players
+  game_hash[:home][:players].concat game_hash[:away][:players]
+end
 #In Ruby, you don't need to use parentheses in most instances. It's implicit
 def num_points_scored(player_name)
-players = game_hash[:home][:players].concat game_hash[:away][:players]
+  
+# 
+# players.find do |player|
+#  player[:player_name] == player_name
+# end[:points]
 
-player = players.find do |player|
- player[:player_name] == player_name
-end
-player[:points]
+#append :points to end to make sure it knows it's a part of the previous method
+
+#alt solution
   # game_hash.each do | key, value |
   #   value[:players].each do |element|
   #     if element[:player_name] == player_name
