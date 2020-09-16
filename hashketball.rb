@@ -182,16 +182,17 @@ def team_names
 end
 
 def player_numbers(team_name)
-  jersey_numbers = []
-
-  game_hash.each do | key, value |
-    if value[:team_name] == team_name
-      value[:players].each do |element|
-        jersey_numbers << element[:number]
-      end
-    end
-  end
-  jersey_numbers
+  if team_name == game_hash[:home][:team_name] ? game_hash[:home][:players][:number] : game_hash[:away][:players][:number]
+  # jersey_numbers = []
+  # 
+  # game_hash.each do | key, value |
+  #   if value[:team_name] == team_name
+  #     value[:players].each do |element|
+  #       jersey_numbers << element[:number]
+  #     end
+  #   end
+  # end
+  # jersey_numbers
 end
 
 def player_stats(player_name)
