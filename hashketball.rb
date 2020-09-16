@@ -134,7 +134,7 @@ end
 
 def find_player(name)
   players.find do |player|
-    player[:player_name] == player_name
+    player[:player_name] == name
   end
 end
 #In Ruby, you don't need to use parentheses in most instances. It's implicit
