@@ -173,7 +173,7 @@ end
 
 def team_names
   # teams = []
-  # 
+  #
   # game_hash.each do | key, value |
   #   teams << value[:team_name]
   # end
