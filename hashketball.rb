@@ -133,9 +133,11 @@ def players
 end
 
 def find_player(name)
-  players.find do |player|
-    player[:player_name] == name
-  end
+  players.find{|player| player[:player_name] == name}
+  # players.find do |player|
+  #   player[:player_name] == name
+  # end
+
 end
 #In Ruby, you don't need to use parentheses in most instances. It's implicit
 def num_points_scored(player_name)
@@ -155,7 +157,7 @@ end
 
 def shoe_size(player_name)
   find_player(player_name)[:shoe]
-  
+
   # game_hash.each do | key, value |
   #   value[:players].each do |element|
   #     if element[:player_name] == player_name
