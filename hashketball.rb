@@ -178,7 +178,7 @@ def team_names
   #   teams << value[:team_name]
   # end
   # teams
-  game_hash.map {|team| team.values[0]}
+  game_hash.map {|place, team| team[:team_name]}
 end
 
 def player_numbers(team_name)
