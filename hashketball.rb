@@ -172,12 +172,13 @@ def team_colors(team_name)
 end
 
 def team_names
-  teams = []
-
-  game_hash.each do | key, value |
-    teams << value[:team_name]
-  end
-  teams
+  # teams = []
+  # 
+  # game_hash.each do | key, value |
+  #   teams << value[:team_name]
+  # end
+  # teams
+  game_hash.map {|team| team.values[0]}
 end
 
 def player_numbers(team_name)
